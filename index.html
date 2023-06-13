@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/syle.css" />
+    <script src="./js/app.js" defer></script>
+    <title>E-commerce product page</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <div class="nav-links-wrapper">
+            <div class="hamburger">
+              <i class="bi bi-list"></i>
+            </div>
+            <div><img src="./images/logo.svg" alt="" /></div>
+            <ul class="nav-links nav-links-lg">
+              <li><a href=""> Collections </a></li>
+              <li><a href="">Men</a></li>
+              <li><a href="">Women</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </div>
+          <div class="cart-pro">
+            <div class="cart">
+              <div class="badge">0</div>
+              <img src="./images/icon-cart.svg" alt="" />
+            </div>
+            <div class="profile">
+              <img src="./images/image-avatar.png" alt="" />
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="flex-container">
+          <section class="product">
+            <div class="container">
+              <div class="main-img main-img-lg">
+                <img src="./images/image-product-1.jpg" alt="" />
+              </div>
+              <div class="main-img main-img-sm">
+                <img class="fade" src="./images/image-product-1.jpg" alt="" />
+                <button class="prev">
+                  <!-- <i class="bi bi-chevron-left"></i> -->
+                  <i class="bx bx-chevron-left"></i>
+                </button>
+                <button class="next">
+                  <!-- <i class="bi bi-chevron-right"></i> -->
+                  <i class="bx bx-chevron-right"></i>
+                </button>
+              </div>
+              <div class="img-thumbnails">
+                <div class="img-card active">
+                  <img src="./images/image-product-1.jpg" alt="" srcset="" />
+                </div>
+                <div class="img-card">
+                  <img src="./images/image-product-2.jpg" alt="" srcset="" />
+                </div>
+                <div class="img-card">
+                  <img
+                    src="./images/image-product-3.jpg"
+                    alt="image product 3 thumbnail"
+                    srcset=""
+                  />
+                </div>
+                <div class="img-card">
+                  <img src="./images/image-product-4.jpg" alt="" srcset="" />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="details">
+            <div class="container">
+              <h5>Sneaker Company</h5>
+              <h1>Fall Limited Edition Sneakers</h1>
+              <p>
+                These low-profile sneakers are your perfect casual wear
+                companion. Featuring a durable rubber outer sole, they’ll
+                withstand everything the weather can offer.
+              </p>
+              <div class="pricing">
+                <div class="">
+                  <span class="price">$125.00</span>
+                  <span class="discount"> 50%</span>
+                </div>
+                <p class="real-price">$250.00</p>
+              </div>
+              <div class="buttons">
+                <div class="counter-wrapper">
+                  <div class="minus">
+                    <i class="bi bi-dash"></i>
+                  </div>
+                  <div class="counter">0</div>
+                  <div class="add">
+                    <i class="bi bi-plus"></i>
+                  </div>
+                </div>
+                <button class="add-to-cart btn">
+                  <i class="bi bi-cart3"></i>
+                  <span>Add to cart</span>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <div class="cart-modal-wrapper hidden">
+      <div class="container">
+        <h2>Cart</h2>
+      </div>
+      <hr />
+      <div class="container">
+        <div class="cart-item-content">
+          <p class="empty-cart">Your Cart Is Empty</p>
+          <!-- <div class="cart-item-wrapper">
+            <div class="cart-img">
+              <img src="./images/image-product-1-thumbnail.jpg" alt="" />
+            </div>
+            <div class="cart-item-detail">
+              <p>Fall Limited Edition Sneakers</p>
+              <p>$125.00 x 3 <span class="total-price">$375.00</span></p>
+            </div>
+            <div class="delete-icon">
+              <i class="bi bi-trash"></i>
+            </div>
+          </div> -->
+        </div>
+        <button class="checkout-btn btn">Checkout</button>
+      </div>
+    </div>
+
+    <div class="overlay">
+      <div class="menu-modal-wrapper">
+        <div class="container hidden">
+          <div class="close-icon">
+            <i class="bi bi-x"></i>
+          </div>
+          <ul class="nav-links">
+            <li><a href=""> Collections </a></li>
+            <li><a href="">Men</a></li>
+            <li><a href="">Women</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

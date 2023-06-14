@@ -91,6 +91,7 @@ const addToCart = function () {
   itemWrapperEL.innerHTML += html;
   badgeEl.textContent = counterEl.textContent;
   badgeEl.style.opacity = 1;
+  counterEl.textContent = "";
   checkUi();
 };
 const closeMenu = () => {

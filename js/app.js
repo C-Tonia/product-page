@@ -55,6 +55,7 @@ const closeCartModal = () => {
 
 const displayImage = function (e) {
   const allThumbnailsImg = document.querySelectorAll(".img-card");
+  const mainImg = document.querySelector(".main-img-lg");
   let imgSrc;
   if (e.target.parentElement.classList.contains("img-card")) {
     const imgClicked = e.target;
@@ -68,7 +69,7 @@ const displayImage = function (e) {
     // setting active class to the element clicked
     imgClicked.parentElement.classList.add("active");
     imgSrc = imgClicked.getAttribute("src");
-    imgThumbnailsEl.previousElementSibling.firstElementChild.src = imgSrc;
+    mainImg.querySelector("img").src = imgSrc;
   }
 };
 const addToCart = function () {
@@ -124,17 +125,20 @@ const imgSlider = function () {
   document.querySelector(".main-img-sm img").src = allImgSrc[slideIndex];
 };
 
-nextEl.addEventListener("click", imgSlider.bind(1));
-prevEL.addEventListener("click", imgSlider.bind(-1));
+function init() {
+  // Event Listeners
+  nextEl.addEventListener("click", imgSlider.bind(1));
+  prevEL.addEventListener("click", imgSlider.bind(-1));
+  closeMenuEl.addEventListener("click", closeMenu);
+  hamburgerEl.addEventListener("click", openMenu);
+  addEl.addEventListener("click", increment);
+  minusEl.addEventListener("click", decrement);
+  openCartModalEl.addEventListener("click", openAndCloseCartModal);
+  document.querySelector("main").addEventListener("click", closeCartModal);
+  imgThumbnailsEl.addEventListener("click", displayImage);
+  addToCartBtnEl.addEventListener("click", addToCart);
 
-// Event Listeners
-closeMenuEl.addEventListener("click", closeMenu);
-hamburgerEl.addEventListener("click", openMenu);
-addEl.addEventListener("click", increment);
-minusEl.addEventListener("click", decrement);
-openCartModalEl.addEventListener("click", openAndCloseCartModal);
-document.querySelector("main").addEventListener("click", closeCartModal);
-imgThumbnailsEl.addEventListener("click", displayImage);
-addToCartBtnEl.addEventListener("click", addToCart);
+  checkUi();
+}
 
-checkUi();
+init();
